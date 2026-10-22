@@ -1,15 +1,16 @@
-# ATM Cash Withdrawal 💳
+# Electricity Bill Calculator ⚡
 
-## 📌 About the Project
-This is a simple ATM Cash Withdrawal application developed using HTML and JavaScript. It allows users to enter their ATM PIN and withdrawal amount. The program validates the PIN, checks the withdrawal amount, and updates the remaining balance.
+## 📌 About the Task
+The Electricity Bill Calculator is a simple web application developed using HTML and JavaScript. It calculates the electricity bill based on the number of units entered by the user.
+
+The application uses different rates for different unit ranges and displays the total bill amount.
 
 ## 🚀 Features
-- PIN verification
-- Withdrawal amount validation
-- Checks whether the amount is a multiple of ₹100
-- Checks for sufficient balance
-- Displays the withdrawn amount and remaining balance
-- Shows error messages for invalid inputs
+- Accepts electricity consumption in units
+- Calculates the bill based on unit ranges
+- Uses different rates for different consumption levels
+- Validates empty and negative inputs
+- Displays the total electricity bill dynamically
 
 ## 🛠️ Technologies Used
 - HTML5
@@ -17,7 +18,7 @@ This is a simple ATM Cash Withdrawal application developed using HTML and JavaSc
 
 ## 📂 Folder Structure
 ```text
-Task 1-ATM Cash Withdrawal/
+Task 1-Electricity Bill Calculator/
 │
 ├── index.html
 ├── script.js
@@ -26,34 +27,38 @@ Task 1-ATM Cash Withdrawal/
 ```
 
 ## 💻 Sample Input
-- ATM PIN: `1234`
-- Initial Balance: ₹10,000
-- Withdrawal Amount: ₹2,000
+```text
+Electricity Units: 250
+```
+
+## 📊 Sample Calculation
+- First 100 units: 100 × ₹1.50 = ₹150
+- Next 100 units: 100 × ₹2.50 = ₹250
+- Remaining 50 units: 50 × ₹4 = ₹200
 
 ## 📤 Sample Output
 ```text
-Withdrawal Successful!
-Withdrawn Amount: ₹2000
-Remaining Balance: ₹8000
+Total Electricity Bill: ₹600.00
 ```
 
 ## 🖼️ Output Screenshot
-<img width="736" height="523" alt="Output_1" src="https://github.com/user-attachments/assets/33e13d5e-2560-442c-9004-929ebbb24336" />
+<img width="736" height="523" alt="Output_1" src="https://github.com/user-attachments/assets/ec3c7213-24ee-423b-af62-8ae8997cf08e" />
 
 
 ## ▶️ How to Run
 1. Download or clone this repository.
-2. Open the `Task 1-ATM Cash Withdrawal` folder.
+2. Open the `Task 1-Electricity Bill Calculator` folder.
 3. Open `index.html` in your web browser.
-4. Enter the ATM PIN `1234`.
-5. Enter the withdrawal amount and click the withdrawal button.
+4. Enter the electricity consumption in units.
+5. Click the **Calculate Bill** button to view the total amount.
 
 ## 📚 What I Learned
-- Using JavaScript conditional statements
 - Getting user input from HTML elements
-- Validating PINs and withdrawal amounts
-- Updating values dynamically using JavaScript
-- Displaying messages using `innerText`
+- Using JavaScript conditional statements
+- Performing calculations using arithmetic operators
+- Validating user input
+- Displaying results dynamically using `innerText`
+- Applying different rates based on unit ranges
 
 ## ⚠️ Note
-This is a beginner-level practice project. The PIN and balance are predefined for demonstration purposes. It is not a real banking application.
+The electricity rates used in this project are sample rates for practice purposes only. They do not represent the official electricity tariff.
