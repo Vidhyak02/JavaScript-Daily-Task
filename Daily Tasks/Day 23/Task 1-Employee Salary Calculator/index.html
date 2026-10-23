@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary Calculator</title>
+</head>
+<body>
+
+    <h2>Salary Calculator</h2>
+
+    <label>Basic Salary (₹):</label>
+    <input type="number" id="basicSalary" placeholder="Enter basic salary">
+
+    <br><br>
+
+    <label>HRA (%):</label>
+    <input type="number" id="hra" placeholder="Enter HRA percentage">
+
+    <br><br>
+
+    <label>DA (%):</label>
+    <input type="number" id="da" placeholder="Enter DA percentage">
+
+    <br><br>
+
+    <label>Deduction (₹):</label>
+    <input type="number" id="deduction" placeholder="Enter deduction">
+
+    <br><br>
+
+    <button onclick="calculateSalary()">Calculate Salary</button>
+
+    <p id="result"></p>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
