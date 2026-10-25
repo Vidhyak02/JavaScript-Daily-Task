@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Application</title>
+</head>
+<body>
+    <h1>JavaScript Quiz Application</h1>
+    <p>Choose the correct answer!</p>
+
+    <h3 id="question"></h3>
+
+    <div id="options">
+        <button onclick="checkAnswer(1)" id="option1"></button>
+        <button onclick="checkAnswer(2)" id="option2"></button>
+        <button onclick="checkAnswer(3)" id="option3"></button>
+        <button onclick="checkAnswer(4)" id="option4"></button>
+    </div>
+
+    <p id="feedback"></p>
+    <p id="score"></p>
+
+    <button onclick="nextQuestion()" id="next">Next Question</button>
+    <button onclick="restartQuiz()" id="restart" hidden>Restart Quiz</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
