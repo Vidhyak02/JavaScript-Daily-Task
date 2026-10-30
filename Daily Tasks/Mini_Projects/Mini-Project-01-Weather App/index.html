@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Weather App</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JavaScript File -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="weather-container">
+
+        <header>
+            <h1>☁ Weather App</h1>
+            <p>Discover the weather in your city</p>
+        </header>
+
+        <!-- Search Section -->
+        <form id="weatherForm" class="search-box">
+
+            <input
+                type="text"
+                id="cityInput"
+                placeholder="Enter city name..."
+                autocomplete="off"
+                required
+            >
+
+            <button type="submit" id="searchBtn">
+                Search
+            </button>
+
+        </form>
+
+        <!-- Message Section -->
+        <p id="message" class="message"></p>
+
+        <!-- Weather Information -->
+        <section id="weatherResult" class="weather-card" hidden>
+
+            <div class="location">
+                <h2 id="cityName">City Name</h2>
+                <p id="dateTime">Current Weather</p>
+            </div>
+
+            <div class="weather-main">
+
+                <div class="weather-icon" id="weatherIcon">
+                    ☀️
+                </div>
+
+                <div class="temperature">
+                    <h1 id="temperature">--°C</h1>
+                    <p id="condition">Weather Condition</p>
+                </div>
+
+            </div>
+
+            <p class="feels-like">
+                Feels Like: <span id="feelsLike">--°C</span>
+            </p>
+
+            <div class="weather-details">
+
+                <div class="detail-box">
+                    <span class="detail-icon">💧</span>
+                    <div>
+                        <p>Humidity</p>
+                        <h3 id="humidity">--%</h3>
+                    </div>
+                </div>
+
+                <div class="detail-box">
+                    <span class="detail-icon">💨</span>
+                    <div>
+                        <p>Wind Speed</p>
+                        <h3 id="windSpeed">-- km/h</h3>
+                    </div>
+                </div>
+
+                <div class="detail-box">
+                    <span class="detail-icon">🌧️</span>
+                    <div>
+                        <p>Precipitation</p>
+                        <h3 id="precipitation">-- mm</h3>
+                    </div>
+                </div>
+
+                <div class="detail-box">
+                    <span class="detail-icon">🌡️</span>
+                    <div>
+                        <p>Weather Type</p>
+                        <h3 id="weatherType">--</h3>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Default Message -->
+        <div id="welcomeMessage" class="welcome-message">
+            <div class="welcome-icon">🌤️</div>
+            <h2>Check Your City's Weather</h2>
+            <p>Enter a city name above to get real-time weather information.</p>
+        </div>
+
+        <footer>
+            <p>Made with ❤️ using HTML, CSS & JavaScript</p>
+            <p>Weather data powered by Open-Meteo</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>

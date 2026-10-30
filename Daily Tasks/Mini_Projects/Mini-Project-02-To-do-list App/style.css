@@ -1,0 +1,434 @@
+
+/* General Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px 15px;
+
+    background: linear-gradient(
+        135deg,
+        #e9d5ff,
+        #dbeafe,
+        #fce7f3
+    );
+
+    color: #333;
+}
+
+/* Main Container */
+
+.todo-container {
+    width: 100%;
+    max-width: 600px;
+
+    padding: 35px;
+
+    background: #ffffff;
+
+    border-radius: 25px;
+
+    box-shadow: 0 15px 45px rgba(80, 60, 120, 0.15);
+}
+
+/* Header */
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo {
+    width: 55px;
+    height: 55px;
+
+    margin: 0 auto 12px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #8b5cf6;
+    color: white;
+
+    border-radius: 18px;
+
+    font-size: 30px;
+    font-weight: 700;
+}
+
+header h1 {
+    font-size: 28px;
+    color: #392b61;
+    margin-bottom: 7px;
+}
+
+header p {
+    color: #888;
+    font-size: 13px;
+}
+
+/* Input Section */
+
+.input-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.input-section input {
+    flex: 1;
+    min-width: 0;
+
+    padding: 15px;
+
+    border: 2px solid #eee7ff;
+    border-radius: 12px;
+
+    outline: none;
+
+    font-family: inherit;
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+.input-section input:focus {
+    border-color: #8b5cf6;
+    box-shadow: 0 0 8px rgba(139, 92, 246, 0.15);
+}
+
+.input-section button {
+    padding: 12px 20px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: #8b5cf6;
+    color: white;
+
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.input-section button:hover {
+    background: #7040d6;
+    transform: translateY(-2px);
+}
+
+/* Message */
+
+.message {
+    min-height: 20px;
+    font-size: 12px;
+    color: #e05270;
+    margin-bottom: 10px;
+}
+
+/* Statistics */
+
+.statistics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+
+    margin: 20px 0 25px;
+}
+
+.stat-box {
+    text-align: center;
+
+    padding: 17px 8px;
+
+    background: #f6f1ff;
+
+    border-radius: 14px;
+}
+
+.stat-box h2 {
+    color: #8050dc;
+    font-size: 25px;
+    margin-bottom: 3px;
+}
+
+.stat-box p {
+    color: #777;
+    font-size: 11px;
+}
+
+/* Filter Section */
+
+.filter-section {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    margin-bottom: 22px;
+}
+
+.filter-btn {
+    padding: 9px 18px;
+
+    border: 1px solid #e6def7;
+    border-radius: 20px;
+
+    background: white;
+    color: #777;
+
+    font-family: inherit;
+    font-size: 12px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.filter-btn:hover {
+    background: #f4efff;
+    color: #8050dc;
+}
+
+.filter-btn.active {
+    background: #8b5cf6;
+    color: white;
+    border-color: #8b5cf6;
+}
+
+/* Task List */
+
+.task-list {
+    list-style: none;
+}
+
+/* Individual Task */
+
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 15px;
+
+    margin-bottom: 12px;
+
+    border: 1px solid #eee8f7;
+    border-radius: 13px;
+
+    background: #fdfcff;
+
+    transition: 0.3s;
+
+    animation: slideIn 0.3s ease;
+}
+
+.task-item:hover {
+    border-color: #c8b2f5;
+    transform: translateY(-2px);
+}
+
+/* Checkbox */
+
+.task-checkbox {
+    width: 19px;
+    height: 19px;
+
+    accent-color: #8b5cf6;
+
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+/* Task Text */
+
+.task-text {
+    flex: 1;
+    min-width: 0;
+
+    font-size: 13px;
+    color: #444;
+
+    overflow-wrap: anywhere;
+}
+
+.task-item.completed .task-text {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+/* Action Buttons */
+
+.task-actions {
+    display: flex;
+    gap: 7px;
+}
+
+.action-btn {
+    width: 32px;
+    height: 32px;
+
+    border: none;
+    border-radius: 9px;
+
+    font-size: 15px;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.edit-btn {
+    background: #e9e2ff;
+    color: #7040d6;
+}
+
+.delete-btn {
+    background: #ffe5e9;
+    color: #e05270;
+}
+
+.edit-btn:hover {
+    background: #d8caff;
+}
+
+.delete-btn:hover {
+    background: #ffcbd4;
+}
+
+/* Empty Message */
+
+.empty-message {
+    text-align: center;
+    padding: 30px 10px;
+}
+
+.empty-icon {
+    font-size: 55px;
+    margin-bottom: 12px;
+}
+
+.empty-message h3 {
+    color: #4a376f;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.empty-message p {
+    color: #999;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+
+    margin-top: 25px;
+    padding-top: 20px;
+
+    border-top: 1px solid #eee8f7;
+}
+
+footer p {
+    color: #999;
+    font-size: 11px;
+    margin-bottom: 5px;
+}
+
+/* Animation */
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+
+@media (max-width: 480px) {
+
+    .todo-container {
+        padding: 22px 15px;
+    }
+
+    header h1 {
+        font-size: 23px;
+    }
+
+    .input-section {
+        gap: 7px;
+    }
+
+    .input-section input {
+        padding: 12px 10px;
+        font-size: 11px;
+    }
+
+    .input-section button {
+        padding: 10px 12px;
+        font-size: 11px;
+    }
+
+    .statistics {
+        gap: 7px;
+    }
+
+    .stat-box {
+        padding: 13px 5px;
+    }
+
+    .stat-box h2 {
+        font-size: 21px;
+    }
+
+    .stat-box p {
+        font-size: 10px;
+    }
+
+    .filter-section {
+        gap: 6px;
+    }
+
+    .filter-btn {
+        padding: 8px 12px;
+        font-size: 10px;
+    }
+
+    .task-item {
+        padding: 11px 9px;
+        gap: 8px;
+    }
+
+    .task-text {
+        font-size: 11px;
+    }
+
+    .action-btn {
+        width: 29px;
+        height: 29px;
+        font-size: 13px;
+    }
+
+}
