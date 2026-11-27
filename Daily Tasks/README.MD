@@ -1,4 +1,4 @@
- # JavaScript Daily Tasks
+# JavaScript Daily Tasks
 
 This repository contains my daily JavaScript practice tasks completed as part of my learning journey.
 
